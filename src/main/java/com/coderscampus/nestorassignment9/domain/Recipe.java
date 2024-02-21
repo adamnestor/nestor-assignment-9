@@ -20,7 +20,7 @@ public class Recipe {
 	public Recipe(Integer cookingMinutes, Boolean dairyFree, Boolean glutenFree, String instructions,
 			Double preparationMinutes, Double pricePerServing, Integer readyInMinutes, Integer servings,
 			Double spoonacularScore, String title, Boolean vegan, Boolean vegetarian) {
-		super();
+		
 		this.cookingMinutes = cookingMinutes;
 		this.dairyFree = dairyFree;
 		this.glutenFree = glutenFree;
@@ -35,12 +35,10 @@ public class Recipe {
 		this.vegetarian = vegetarian;
 	}
 	
-	
-	// Getters & Setters
-	
 	public Integer getCookingMinutes() {
 		return cookingMinutes;
 	}
+	
 	public void setCookingMinutes(Integer cookingMinutes) {
 		this.cookingMinutes = cookingMinutes;
 	}
