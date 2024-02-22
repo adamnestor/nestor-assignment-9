@@ -45,8 +45,17 @@ public class RecipeService {
 		return filterRecipes(recipe -> recipe.getGlutenFree());
 	}
 	
-	public List<Recipe> veganAndGlutenFree(Predicate<Recipe> filterCriteria1, Predicate<Recipe> filterCriteria2){
+	public List<Recipe> filterByTwoVariables(Predicate<Recipe> filterCriteria1, Predicate<Recipe> filterCriteria2){
 		Predicate<Recipe> combinedCriteria = filterCriteria1.and(filterCriteria2);
 		return recipes.stream().filter(combinedCriteria).collect(Collectors.toList());
 	}
+	
+	public List<Recipe> veganAndGlutenFreeRecipes(){
+		return filterByTwoVariables(
+				recipe -> recipe.getVegan(),
+				recipe -> recipe.getGlutenFree()
+				);
+	}
+	
+	
 }

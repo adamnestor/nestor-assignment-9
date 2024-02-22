@@ -27,10 +27,7 @@ public class FileController {
 	
 	@GetMapping("/vegan-and-gluten-free")
 	public List<Recipe> displayVeganAndGlutenFreeRecipes(){
-		return recipeService.veganAndGlutenFree(
-				recipe -> recipe.getVegan(),
-				recipe -> recipe.getGlutenFree()
-				);
+		return recipeService.veganAndGlutenFreeRecipes();
 	}
 	
 	@GetMapping("/vegetarian")
