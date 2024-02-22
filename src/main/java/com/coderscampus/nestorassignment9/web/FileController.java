@@ -39,4 +39,6 @@ public class FileController {
 	public List<Recipe> displayGlutenFreeRecipes(){
 		return recipeService.glutenFreeRecipes();
 	}
+	
+	
 }
